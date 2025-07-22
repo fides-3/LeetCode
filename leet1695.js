@@ -22,3 +22,26 @@
 
 // 1 <= nums.length <= 105
 // 1 <= nums[i] <= 104
+
+
+var maximumUniqueSubarray=function(nums){
+    const seen =new Set()
+    let left=0
+    currentSum=0
+    maxScore=0
+
+    for(right=0;right<nums.length;right++){
+        // while seen has right means there are duplicates so perform the body part
+        while(seen.has(nums[right])){  
+            seen.delete(nums[left])
+            left++
+        }
+        // occurs when while loop has finished operating and is satisfied
+        currentSum+=nums[right]
+        maxScore=Math.max(maxScore,currentSum)
+
+    }
+    return maxScore
+}
+
+
