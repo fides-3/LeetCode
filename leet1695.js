@@ -42,6 +42,8 @@ var maximumUniqueSubarray=function(nums){
 
     }
     return maxScore
+    maximumUniqueSubarray(5,2,1,2,5,2,1,2,5)
+    maximumUniqueSubarray(4,2,4,5,6)
 }
 
 
