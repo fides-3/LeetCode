@@ -27,23 +27,26 @@
 var maximumUniqueSubarray=function(nums){
     const seen =new Set()
     let left=0
-    currentSum=0
-    maxScore=0
+    let currentSum=0
+    let maxScore=0
 
     for(right=0;right<nums.length;right++){
         // while seen has right means there are duplicates so perform the body part
         while(seen.has(nums[right])){  
             seen.delete(nums[left])
+            currentSum-=nums[left]
             left++
         }
         // occurs when while loop has finished operating and is satisfied
+        seen.add(nums[right])
         currentSum+=nums[right]
         maxScore=Math.max(maxScore,currentSum)
 
     }
     return maxScore
-    maximumUniqueSubarray(5,2,1,2,5,2,1,2,5)
-    maximumUniqueSubarray(4,2,4,5,6)
+   
 }
+console.log(maximumUniqueSubarray([5,2,1,2,5,2,1,2,5]))
+console.log(maximumUniqueSubarray([4,2,4,5,6]))
 
 
