@@ -33,16 +33,18 @@ var twoSum=function(nums,target){
 
     for(let i=0;i<nums.length;i++){
         let num=nums[i]
-        const complement=num-target
+        const complement=target-num
         // [2,5,7,11] 
         // first number is 2.target=9.compliment 7.does 7 exist in map no. store (2,0).Next number is 7.Complement is 2.does 2 exist in map Yes.so map.get(complement)returns index of the complement so our complement is 2 index=0, i is the index of current number so 7 is in index 1 [0,1]  
         if(map.has(complement)){
             return [map.get(complement),i]
         }
-    
+
+        else{
+
             // this occurs when the compliment is not in the map.It stores the number and its index
-            return map.set(num,i)
-        
+            map.set(num,i)
+        }
     }
 }
 console.log(twoSum([2,7,5,11],9))
