@@ -39,10 +39,10 @@ var twoSum=function(nums,target){
         if(map.has(complement)){
             return [map.get(complement),i]
         }
-        else{
+    
             // this occurs when the compliment is not in the map.It stores the number and its index
             return map.set(num,i)
-        }
+        
     }
 }
 console.log(twoSum([2,7,5,11],9))
