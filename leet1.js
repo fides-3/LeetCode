@@ -45,4 +45,4 @@ var twoSum=function(nums,target){
         }
     }
 }
-console.log(twoSum([2,5,7,11],9))
+console.log(twoSum([2,7,5,11],9))
