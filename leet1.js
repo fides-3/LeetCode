@@ -48,3 +48,4 @@ var twoSum=function(nums,target){
     }
 }
 console.log(twoSum([2,7,5,11],9))
+console.log(twoSum([3,2,4],6))
