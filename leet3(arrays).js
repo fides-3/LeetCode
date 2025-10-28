@@ -34,6 +34,7 @@
 
 // TWO POINTER
 
+
 var maxArea=function(height){
     let start=0
     let end=height.length-1
