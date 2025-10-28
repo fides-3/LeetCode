@@ -44,6 +44,8 @@ var twoSum=function(nums,target){
 
             // this occurs when the compliment is not in the map.It stores the number and its index
             map.set(num,i)
+
+
         }
     }
 }
